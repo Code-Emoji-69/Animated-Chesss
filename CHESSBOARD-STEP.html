@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SImple-ChessBoard</title>
+
+    <style>
+
+        .container{
+            display: grid;
+            width: 90%;
+            max-width: 700px;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            aspect-ratio: 1;
+            border: 1px black solid;
+            
+            font-size: 40px;
+        }
+
+    .white, .black {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+        .white{
+            background-color: whitesmoke;
+        }
+
+        .black{
+            background-color: rgb(109, 117, 128);
+        }
+
+        #id-white1{
+            width: 100px;
+            width: 100px;
+            position: relative;
+            animation: mymove 4s infinite;
+            text-align: center;
+        }
+        @keyframes mymove {
+          0%    {bottom: 0px;}
+          50%   {bottom: 100px;}
+          50%   {bottom: 100px;}
+          100%  {bottom: 200px;}
+    
+        }
+
+        /* ANIMATION ON MOVING HORSE (Uppre -black- Horse) */
+
+        #horse-upr-blk{ 
+            position: relative;
+            animation: Horse-move 4s infinite;
+            /* text-align: center; */
+        }
+
+        @keyframes Horse-move {
+            0%   {top: 0px; left: 0px;}
+            40%  {top: 0px; left: 100px;}
+            75%  {top: 200px; left: 100px;}
+            /* 75%  {bottom: 100px; left: 100px;} */
+        }
+    /* Lower Horse black */
+
+        #horse-Lwr-blk{ 
+                position: relative;
+                animation: Horse-move-Lwr 4s infinite;
+                /* text-align: center; */
+            }
+
+            @keyframes Horse-move-Lwr {
+                0%   {bottom: 0px; left: 0px;}
+                40%  {bottom: 0px; left: 100px;}
+                75%  {bottom: 200px; left: 100px;}
+                /* 75%  {bottom: 100px; left: 100px;} */
+            }
+        
+
+    
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="white">♜</div>
+        <div class="black">♝</div>
+        <div class="white">♞</div>
+        <div class="black">♛</div>
+        <div class="white">♚</div>
+        <div class="black"><span id="horse-upr-blk">♞</span></div>
+        <div class="white">♝</div>
+        <div class="black">♜</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"><span id="id-white3" ></span></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white"></div>
+        <div class="black"></div>
+        <div class="white" ><span id="id-white2" ></span></div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black">♟️</div>
+        <div class="white">♟️</div>
+        <div class="black"><span id="id-white1">♟️</span></div>
+        <div class="black">♜</div>
+        <div class="white">♝</div>
+        <div class="black"><span id="horse-Lwr-blk">♞</div>
+        <div class="white">♚</div>
+        <div class="black">♛</div>
+        <div class="white"><span id="horse-Lwr-wht">♞</div>
+        <div class="black">♝</div>
+        <div class="white">♜</div>
+       
+    </div>
+</body>
+</html>

@@ -3,132 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChessBoard</title>
-
+    <title>Front-page</title>
     <style>
-
-        .Main-page{
-            background-image: url(https://i.ibb.co/pJgnYks/chess-56257.jpg);
+        
+        body{
+            background-image: url(https://i.ibb.co/r55fFZt/chess.jpg);
             background-size: cover;
         }
 
-        .container{
-            display: grid;
-            width: 90%;
-            max-width: 700px;
-            grid-template-columns: repeat(8, 1fr);
-            grid-template-rows: repeat(8, 1fr);
-            aspect-ratio: 1;
-            border: 1px black solid;
-            
-            
-            font-size: 40px;
-        }
-
-    .white, .black {
-    height: 88px;
-    width: 88px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-        .white{
-            background-color: whitesmoke;
-        }
-
-        .black{
-            background-color: rgb(109, 117, 128);
-        }
-
-        /* Animation on moving Pawns ♟️ */
-
-        #id-white1{
-            width: 100px;
-            width: 100px;
-            position: relative;
-            animation: mymove 4s infinite;
+        .head{
             text-align: center;
         }
-        @keyframes mymove {
-          0%    {bottom: 0px;}
-          50%   {bottom: 100px;}
-          50%   {bottom: 100px;}
-          100%  {bottom: 200px;}
-    
-        }
 
-        #pawn9-upr-blk{
-            width: 100px;
-            width: 100px;
-            position: relative;
-            animation: pawn9-upr-blk 4s infinite;
-            text-align: center;
-        }
-        @keyframes pawn9-upr-blk {
-          0%    {top: 0px;}
-          50%   {top: 100px;}
-          50%   {top: 100px;}
-          100%  {top: 200px;}
-        }
-
-        #pawn16-upr-wht{
-            width: 100px;
-            width: 100px;
-            position: relative;
-            animation: pawn9-upr-wht 4s infinite;
-            text-align: center;
-        }
-        @keyframes pawn9-upr-wht {
-          0%    {top: 0px;}
-          50%   {top: 100px;}
-          50%   {top: 100px;}
-          100%  {top: 200px;}
-    
-        }
-
-        .Chessfooter{
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 90%);
-            display: inline-block;
-            color: antiquewhite;
-            font-size: 50px;
-            position: relative;
-            left: 40%;
-        }
-
-        /* ANIMATION ON MOVING HORSE (Uppre -black- Horse) */
-
-        #horse-upr-blk{ 
-            position: relative;
-            animation: Horse-move 4s infinite;
-            /* text-align: center; */
-        }
-
-        @keyframes Horse-move {
-            0%   {top: 0px; left: 0px;}
-            40%  {top: 0px; left: 85px;}
-            75%  {top: 180px; left: 85px;}
-            /* 75%  {bottom: 100px; left: 100px;} */
-        }
-    /* Lower Horse black */
-
-        #horse-Lwr-blk{ 
-                position: relative;
-                animation: Horse-move-Lwr 4s infinite;
-                /* text-align: center; */
-            }
-
-            @keyframes Horse-move-Lwr {
-                0%   {bottom: 0px; left: 0px;}
-                40%  {bottom: 0px; left: 85px;}
-                75%  {bottom: 180px; left: 80px;}
-                /* 75%  {bottom: 100px; left: 100px;} */
-            }
         
-/* Button  */
-   
+        h2{
+            font-size: 50px;
+            text-decoration: underline;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-.fancy-button {
+        }
+        
+        /* .btn:hover{
+            cursor: pointer;
+            
+            font-size: 25px;
+        } */
+        /* button{
+            background-color: greenyellow;
+        } */
+
+
+
+        .fancy-button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 15px;
@@ -150,10 +57,6 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .fancy-button:active {
-            transform: scale(0.98);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        }
 
         .fancy-button span:after {
             content: '\00bb';
@@ -168,86 +71,21 @@
                 opacity: 1;
                 right: 5px;
          }
-         
+
+
+        .fancy-button:active {
+            transform: scale(0.98);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
     </style>
-
 </head>
-
-    <body class="Main-page">
-
-        <div class="btn"> 
-           <a href="front.html"><button type="button" class="fancy-button">◀️Back</button></a> 
-        </div>
+<body class="front-page">
+    <div class="head">
+        <h2>Welcome to Animated - ChessBoard</h2>
+        <a href="index.html"><button type="button" class="fancy-button"><span>Click-Me</span></button></a>
     
-        <div class="footerDiv">
-            <div class="container">
-                <div class="white">♜</div>
-                <div class="black">♝</div>
-                <div class="white">♞</div>
-                <div class="black">♛</div>
-                <div class="white">♚</div>
-                <div class="black"><span id="horse-upr-blk">♞</span></div>
-                <div class="white">♝</div>
-                <div class="black">♜</div>
-                <div class="black"><span id="pawn9-upr-blk">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black">♟️</div>
-                <div class="white"><span id="pawn16-upr-wht">♟️</div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"><span id="id-white3" ></span></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white"></div>
-                <div class="black"></div>
-                <div class="white" ><span id="id-white2" ></span></div>
-                <div class="white"><span id="id-white1">♟️</span></div>
-                <div class="black">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black">♟️</div>
-                <div class="white">♟️</div>
-                <div class="black"><span id="id-white1">♟️</span></div>
-                <div class="black">♜</div>
-                <div class="white">♝</div>
-                <div class="black"><span id="horse-Lwr-blk">♞</div>
-                <div class="white">♚</div>
-                <div class="black">♛</div>
-                <div class="white"><span id="horse-Lwr-wht">♞</div>
-                <div class="black">♝</div>
-                <div class="white">♜</div>
-                
-            </div>
     </div>
-
+    <!-- <a href="https://ibb.co/4jmpTMs"><img src="https://i.ibb.co/sFmqwQ5/Chess-image.jpg" alt="Chess-image" border="0"></a> -->
 </body>
 </html>

@@ -35,6 +35,8 @@
             background-color: rgb(109, 117, 128);
         }
 
+        /* Animation on moving Pawns ♟️ */
+
         #id-white1{
             width: 100px;
             width: 100px;
@@ -48,6 +50,44 @@
           50%   {bottom: 100px;}
           100%  {bottom: 200px;}
     
+        }
+
+        #pawn9-upr-blk{
+            width: 100px;
+            width: 100px;
+            position: relative;
+            animation: pawn9-upr-blk 4s infinite;
+            text-align: center;
+        }
+        @keyframes pawn9-upr-blk {
+          0%    {top: 0px;}
+          50%   {top: 100px;}
+          50%   {top: 100px;}
+          100%  {top: 200px;}
+        }
+
+        #pawn16-upr-wht{
+            width: 100px;
+            width: 100px;
+            position: relative;
+            animation: pawn9-upr-wht 4s infinite;
+            text-align: center;
+        }
+        @keyframes pawn9-upr-wht {
+          0%    {top: 0px;}
+          50%   {top: 100px;}
+          50%   {top: 100px;}
+          100%  {top: 200px;}
+    
+        }
+
+        .Chessfooter{
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 90%);
+            display: inline-block;
+            color: antiquewhite;
+            font-size: 50px;
+            position: relative;
+            left: 40%;
         }
 
         /* ANIMATION ON MOVING HORSE (Uppre -black- Horse) */
@@ -86,73 +126,76 @@
 </head>
 
 <body>
+    <div class="footerDiv">
+        <div class="container">
+            <div class="white">♜</div>
+            <div class="black">♝</div>
+            <div class="white">♞</div>
+            <div class="black">♛</div>
+            <div class="white">♚</div>
+            <div class="black"><span id="horse-upr-blk">♞</span></div>
+            <div class="white">♝</div>
+            <div class="black">♜</div>
+            <div class="black"><span id="pawn9-upr-blk">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black">♟️</div>
+            <div class="white"><span id="pawn16-upr-wht">♟️</div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"><span id="id-white3" ></span></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white" ><span id="id-white2" ></span></div>
+            <div class="white"><span id="id-white1">♟️</span></div>
+            <div class="black">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black">♟️</div>
+            <div class="white">♟️</div>
+            <div class="black"><span id="id-white1">♟️</span></div>
+            <div class="black">♜</div>
+            <div class="white">♝</div>
+            <div class="black"><span id="horse-Lwr-blk">♞</div>
+            <div class="white">♚</div>
+            <div class="black">♛</div>
+            <div class="white"><span id="horse-Lwr-wht">♞</div>
+            <div class="black">♝</div>
+            <div class="white">♜</div>
+            
+        </div>
+    <footer class="Chessfooter">ChessBoard</footer>
+</div>
 
-    <div class="container">
-        <div class="white">♜</div>
-        <div class="black">♝</div>
-        <div class="white">♞</div>
-        <div class="black">♛</div>
-        <div class="white">♚</div>
-        <div class="black"><span id="horse-upr-blk">♞</span></div>
-        <div class="white">♝</div>
-        <div class="black">♜</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"><span id="id-white3" ></span></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white"></div>
-        <div class="black"></div>
-        <div class="white" ><span id="id-white2" ></span></div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black">♟️</div>
-        <div class="white">♟️</div>
-        <div class="black"><span id="id-white1">♟️</span></div>
-        <div class="black">♜</div>
-        <div class="white">♝</div>
-        <div class="black"><span id="horse-Lwr-blk">♞</div>
-        <div class="white">♚</div>
-        <div class="black">♛</div>
-        <div class="white"><span id="horse-Lwr-wht">♞</div>
-        <div class="black">♝</div>
-        <div class="white">♜</div>
-       
-    </div>
 </body>
 </html>
